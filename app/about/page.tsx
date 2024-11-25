@@ -1,10 +1,13 @@
-import Navigation from "../../components/navigation";
 import Avatar from "./components/avatar";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About"
+};
 
 const About = () => {
   return (
     <div>
-      <Navigation />
       <h1>About</h1>
     </div>
   );
