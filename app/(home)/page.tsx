@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 const GetMovies = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 1000)); // 임의 로딩
   const res = await fetch(API_URL, { cache: "no-store" }); // SSR용 옵션
   return await res.json();
 };
@@ -17,8 +16,8 @@ const Start = async () => {
   const movies = await GetMovies();
 
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="flex min-h-screen items-center justify-center bg-red-500">
+      <h1 className="text-4xl font-bold text-blue-500">Home</h1>
       {/* <div>{JSON.stringify(movies)}</div> */}
       <div>
         {movies.map((movie) => (
