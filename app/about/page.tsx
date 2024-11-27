@@ -1,4 +1,3 @@
-import Avatar from "./components/avatar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
