@@ -20,6 +20,12 @@ const Start = async () => {
       <h1 className="text-4xl font-bold text-blue-500">Home</h1>
       {/* <div>{JSON.stringify(movies)}</div> */}
       <div>
+        <button className="inline-block cursor-pointer rounded-md bg-gray-800 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">
+          Button
+        </button>
+      </div>
+
+      <div>
         {movies.map((movie) => (
           <li key={movie.id}>
             <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
